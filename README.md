@@ -9,7 +9,7 @@
 # Notes and status
 ### Data Structures
 - Chapter 1 : Arrays and Strings
-- Chapter 2 : I Linked Lists
+- Chapter 2 : Linked Lists
 - Chapter 3 : Stacks and Queues
 - Chapter 4: Trees and Graphs
 ### Concepts and Algorithms
