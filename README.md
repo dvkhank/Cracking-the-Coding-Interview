@@ -18,4 +18,23 @@
 - Chapter 7 : Object-Oriented Design
 - Chapter 8 : Recursion and Dynamic Programming
   
+---
+# Thuật toán
+## Độ phức tạp thời gian (Time Complexity)
 
+**Định nghĩa:** Độ phức tạp thời gian là thước đo về số lượng thao tác (hay bước thực thi) mà một thuật toán cần thực hiện để hoàn thành nhiệm vụ của mình khi đầu vào tăng dần.
+  *   Khi nói đến độ phức tạp là O(g(n) nghĩa là chỉ định **thời gian tối đa** của thuật toán khi kích thước **dữ liệu lớn dần**
+
+**Tính hiệu quả:** 
+  * Thường dựa trên thời gian > sử dụng bộ nhớ
+  * Trường hợp tốt nhất ? xấu nhất ?
+
+**Chi phí thực hiện:** **phép gán, so sánh, đổi chỗ**
+## Các loại:
+- **O(1) (Hằng số):** Thời gian thực thi **không phụ thuộc vào kích thước đầu vào**. Ví dụ: Truy cập một phần tử trong mảng.
+- **O(log n) (Logarit):** Thời gian thực thi **tăng theo logarit** của kích thước đầu vào. Ví dụ: Tìm kiếm nhị phân.
+- **O(n) (Tuyến tính):** Thời gian thực thi tăng theo **tỷ lệ tuyến tính** với kích thước đầu vào. Ví dụ: Duyệt mảng.
+- **O(n log n):** Thời gian thực thi **tăng theo `n log n`**. Ví dụ: Merge Sort, Quick Sort (trung bình).
+- **O(n^2) (Bình phương):** Thời gian thực thi **tăng theo bình phương** của kích thước đầu vào. Ví dụ: Bubble Sort, Selection Sort.
+- **O(2^n) (Hàm mũ):** Thời gian thực thi **tăng theo hàm mũ** của kích thước đầu vào. Ví dụ: Giải bài toán tối ưu hóa sử dụng phương pháp quay lui (backtracking).
+- **O(n!) (Giai thừa):** Thời gian thực thi **tăng theo giai thừa** của kích thước đầu vào. Ví dụ: Giải bài toán liệt kê hoán vị.
