@@ -60,7 +60,7 @@ A hash table is a data structure that maps **keys to values** (like dictionnary)
 
 ### Problem when we concat string :
 
-- [Review Heap and Stack](https://github.com/dvkhank/Java)
+- [Review Heap and Stack](https://github.com/dvkhank/Cracking-the-Coding-Interview/tree/main/Java)
   ![Hình ảnh minh họa](/images/problem-concat.jpg)
 - When we change values of string, it is not change on that string. In fact, it creates another string and references to variable on stack.
 
