@@ -45,6 +45,7 @@
 - **Immutable** : Values will not change. If we do change (concat) then Java will create another object in memory area to store the result.
 - **Mutable** Values will change on the object. If we do change(concat) then Java will change values on that object and don't create any new object in memory area.
 ### Problem when we concat string :
+* [Review Heap and Stack](https://github.com/dvkhank/Java)
 ![Hình ảnh minh họa](/images/problem-concat.jpg)
 When we change values of string, it is not change on that string. In fact, it creates another string and references to variable on stack.
 #### => Solution : use StringBuilder

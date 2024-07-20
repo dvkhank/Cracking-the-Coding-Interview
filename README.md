@@ -8,7 +8,7 @@
 ---
 # Notes and status
 ### Data Structures
-- Chapter 1 : Arrays and Strings
+- [Chapter 1 : Arrays and Strings](https://github.com/dvkhank/Cracking-the-Coding-Interview/tree/main/Chapter1)
 - Chapter 2 : Linked Lists
 - Chapter 3 : Stacks and Queues
 - Chapter 4: Trees and Graphs
