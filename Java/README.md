@@ -8,17 +8,18 @@
 
 - **Complile** : turns your source code into machine code (0 and 1) in a file. Then we start program on that file
 - **Interpret** : reads and executes the source code line by line, turning it into machine code (0 and 1) on the fly.
+- **Objects** : Include properties and behaviors
 
 ### => JAVA is both
 
-# How JVM works :
+## How JVM works :
 
 ![Hình ảnh minh họa](/Java//images//JVM.jpg)
 
 - We only need to bring bytecode file (.class) to execute on any machines that installed JVM
 - JVM excecutes the program on bytecode (.class)
 
-# What does JVM include ?
+## What does JVM include ?
 
 ![Hình ảnh minh họa](/Java//images/insideJVM.png)
 
@@ -42,7 +43,7 @@
   - Execution Engine : Converts bytecode to machine code and executes them
   - Garbage Collector : automatically reclaims memory by deleting objects that are no longer in use (i.e., objects with no references) **from the Heap**, making that memory available for new objects.
 
-# Heap and Stack in JVM
+## Heap and Stack in JVM
 
 - When we start program, JVM require OS provide memory on RAM to work.
 - After that, JVM will devide memory into 2 type : **Stack** and **Heap**
