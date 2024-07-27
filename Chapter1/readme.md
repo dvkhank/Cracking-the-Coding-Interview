@@ -56,12 +56,12 @@ A hash table is a data structure that maps **keys to values** (like dictionnary)
 # String
 
 - String in Java is a list of Unicode characters (each 2 bytes)
-- **Immutable** : Values will not change. If we do change (concat) then Java will create another object in memory area to store the result.
+- **Immutable :** Values (Heap) will not be changed. If we do change (concat) then Java will create another object in memory area to store the result. Therefore, we have to use another variable to get the result after processing string.
   - In fact, **immutable can save our data**
   - For example : We have 3 variables a, b, c that are "Hello". When we create a string variable, Java will find in String Pool if that string is existed. If so, that will have the reference of existed string.
     ![Hình ảnh đẹp](/images/stringpool.jpg)
   - **What happen if string is mutable ? :** If variable C change the value of string to "Hi". Then **all variables have the same reference** : a,b,c **are changed**
-- **Mutable** Values will change on the object. If we do change(concat) then Java will change values on that object and don't create any new object in memory area.
+- **Mutable :** Values(Heap) will be changed. If we do change(concat) then Java will change values on that object and don't create any new object in memory area.
 
 ### Problem when we concat string :
 
@@ -70,3 +70,24 @@ A hash table is a data structure that maps **keys to values** (like dictionnary)
 - When we change values of string, it is not change on that string. In fact, it creates another string and references to variable on stack.
 
 #### => Solution : use StringBuilder
+
+#### => Note 27/07 : Find Shortcut, key features...
+
+- Books:
+
+  - Effective Java
+  - 23 design patterns, Gang of four.
+
+- https://beratyesbek.medium.com/item-2-effective-java-consider-a-builder-when-faced-with-many-constructor-parameters-2ba602cee996
+- Objects and string equality in Java.
+- Early return: https://www.reddit.com/r/coding/comments/i44y0k/return_early_pattern/?rdt=56463
+- https://viblo.asia/p/tim-hieu-ve-radix-sort-va-cach-implement-thuat-toan-nay-trong-swift-E375zk0PKGW
+- https://stackoverflow.com/questions/20443997/how-to-use-jmh-with-gradle
+- https://leetcode.com/problems/valid-anagram/solutions/3687854/3-method-s-c-java-python-beginner-friendly
+
+Home works:
+
+- study above links and concepts.
+- rework all the current algorithm and test cases, learn a bit about related features (Stream, JUnit parameterize tests).
+- rewrite the benchmark of `CheckPermutation` using JMH to better understand the different in time and memory usage.
+- Learn to use IDE shortcut, productivity features more efficient.

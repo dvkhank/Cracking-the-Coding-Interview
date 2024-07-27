@@ -38,7 +38,7 @@ public class CheckPermutation {
 
         return m.values().stream().noneMatch(v -> v != 0);
     }
-
+        
 
     public static boolean checkPermutationV2(String a, String b) {
         if (a == null || b == null) {
