@@ -1,15 +1,19 @@
 package chapter1;
 
+import com.google.common.base.Strings;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.time.Instant;
 import java.util.Objects;
 import java.util.stream.Stream;
 
 import static chapter1.CheckPermutation.checkPermutationV1;
+import static chapter1.CheckPermutation.checkPermutationV2;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CheckPermutationTest {
     public static Stream<Arguments> testCases() {
@@ -40,6 +44,36 @@ class CheckPermutationTest {
     void testCheckPermutationV1(String caseName, String n1, String n2, boolean expect) {
         boolean actual = checkPermutationV1(n1, n2);
         assertEquals(expect, actual, caseName);
+    }
+
+    @ParameterizedTest(name = "{0}")
+    @MethodSource("testCases")
+    void testCheckPermutationV2(String caseName, String n1, String n2, boolean expect) {
+        boolean actual = checkPermutationV2(n1, n2);
+        assertEquals(expect, actual, caseName);
+    }
+
+    @Test
+    void dummyBenchmark() {
+        int n = 1000000;
+        String a = Strings.repeat("TiếngViệt", n);
+        String b = Strings.repeat("iTếngiVtệ", n);
+
+
+        long now = nanoNow();
+        boolean v1 = checkPermutationV1(a, b);
+        System.out.printf("v1 cost %d ns\n", nanoNow() - now);
+        assertTrue(v1);
+
+        now = nanoNow();
+        boolean v2 = checkPermutationV2(a, b);
+        System.out.printf("v2 cost %d ns\n", nanoNow() - now);
+        assertTrue(v2);
+
+    }
+
+    private static int nanoNow() {
+        return Instant.now().getNano();
     }
 
     @Test
